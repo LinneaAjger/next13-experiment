@@ -8,7 +8,7 @@ export default async function Home() {
   console.log(res);
   return (
     <main>
-      <h1 className="text-lg py-2 m-4">Let us do this 🚀 </h1>
+      <h1 className="text-2xl font-bold py-8 uppercase text-left">Popular Movies</h1>
       <section className="grid gap-16 grid-cols-fluid">
         {res.results.map((movie) => (
           <Movie

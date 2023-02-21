@@ -11,7 +11,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        oswald: ["var(--font-oswald)"],
+        ibmPlexSans: ["var(--font-ibmPlexSans)"],
+        creepster: ["var(--font-creepster)"],
       },
       gridTemplateColumns: {
         fluid: "repeat(auto-fit, minmax(15rem, 1fr))",

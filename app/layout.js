@@ -1,10 +1,16 @@
 import './globals.css'
-import { Oswald } from '@next/font/google'
+import { IBM_Plex_Sans } from '@next/font/google'
+import { Creepster } from '@next/font/google'
 
-const oswald = Oswald({
-  weight: ["400", "700"],
+const creepster = Creepster({
+  weight: ["400"],
   subsets: ["latin"],
-  variable: "--font-oswald"
+  variable: "--font-creepster"
+})
+const ibmPlexSans = IBM_Plex_Sans({
+  weight: ["100", "400", "700"],
+  subsets: ["latin"],
+  variable: "--font-ibmPlexSans"
 })
 
 export default function RootLayout({ children }) {
@@ -15,11 +21,12 @@ export default function RootLayout({ children }) {
         head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body className={`${oswald.className} mx-32 my-12`}>
+      <body className={`${ibmPlexSans.className} mx-32 my-12 text-white bg-gradient-to-r from-black to-indigo-900`}>
       <nav>
-        <h1>hey</h1>
-        <ul>
-          <li><a href="/about">About</a></li>
+        <h1 className={`${creepster.className} text-7xl text-center tracking-wider Luckiest_Guy`}>Movie Time</h1>
+        <ul className={"text-lg text-right my-4"}>
+          <li className={"inline-block"}><a href="/about">About</a></li>
+          <li className={"inline-block mx-2"}><a href="#">Sign in</a></li>
         </ul>
       </nav>
         {children}</body>
