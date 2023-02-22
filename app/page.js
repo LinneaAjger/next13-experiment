@@ -1,25 +1,16 @@
 import Movie from "./Movie";
+import styles from './page.module.css';
+import Link from "next/link";
 
 export default async function Home() {
   const data = await fetch(
     `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.API_KEY}`
   );
   const res = await data.json();
-  console.log(res);
+  
   return (
-    <main>
-      <h1 className="text-2xl font-bold py-8 uppercase text-left">Popular Movies</h1>
-      <section className="grid gap-16 grid-cols-fluid">
-        {res.results.map((movie) => (
-          <Movie
-            key={movie.id}
-            id={movie.id}
-            title={movie.title}
-            poster_path={movie.poster_path}
-            release_date={movie.release_date}
-          />
-        ))}
-      </section>
+    <main className={styles.main}>
+      <h2>välkommen</h2>
     </main>
   );
 }

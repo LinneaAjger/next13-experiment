@@ -11,9 +11,9 @@ export default function Movie({ title, id, poster_path, release_date }) {
         width={500}
         height={500} 
         alt={`poster of ${title}`}/>
-      <h1 className={"mt-1"}>{title}</h1>
+      <h3 className={"mt-1"}>{title}</h3>
       </Link>
-      <p className={"font-thin"}>Released: {release_date}</p>
+      {/* <p className={"font-thin"}>Released: {release_date}</p> */}
     </div>
   );
 }

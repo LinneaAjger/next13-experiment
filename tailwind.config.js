@@ -13,6 +13,7 @@ module.exports = {
       fontFamily: {
         ibmPlexSans: ["var(--font-ibmPlexSans)"],
         creepster: ["var(--font-creepster)"],
+        quicksand: ["var(--font-quicksand)"],
       },
       gridTemplateColumns: {
         fluid: "repeat(auto-fit, minmax(15rem, 1fr))",

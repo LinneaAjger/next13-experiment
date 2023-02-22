@@ -1,6 +1,10 @@
+"use client"
+
 import './globals.css'
-import { IBM_Plex_Sans } from '@next/font/google'
-import { Creepster } from '@next/font/google'
+import Link from 'next/link'
+import { IBM_Plex_Sans, Creepster } from '@next/font/google'
+import { useRouter } from 'next/router'
+
 
 const creepster = Creepster({
   weight: ["400"],
@@ -14,6 +18,7 @@ const ibmPlexSans = IBM_Plex_Sans({
 })
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="en">
       {/*
@@ -21,14 +26,31 @@ export default function RootLayout({ children }) {
         head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body className={`${ibmPlexSans.className} mx-32 my-12 text-white bg-gradient-to-r from-black to-indigo-900`}>
+      <body className={ibmPlexSans.className}>
       <nav>
-        <h1 className={`${creepster.className} text-7xl text-center tracking-wider Luckiest_Guy`}>Movie Time</h1>
-        <ul className={"text-lg text-right my-4"}>
-          <li className={"inline-block"}><a href="/about">About</a></li>
-          <li className={"inline-block mx-2"}><a href="#">Sign in</a></li>
+        <h1 className={creepster.className}>Movie Time</h1>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="#">Sign in</a></li>
         </ul>
       </nav>
+      <ul>
+        <li>
+          <Link href="/popular" >
+          <h2>Popular Movies</h2>
+          </Link>
+        </li>
+        <li>
+          <Link href="/top-rated" >
+        <h2>Top Rated</h2>
+          </Link>
+        </li>
+        <li>
+          <Link href="/upcoming" >
+        <h2>Upcoming</h2>
+          </Link>
+        </li>
+        </ul>
         {children}</body>
     </html>
   )
