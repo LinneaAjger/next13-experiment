@@ -18,7 +18,6 @@ export default async function Home() {
             id={movie.id}
             title={movie.title}
             poster_path={movie.poster_path}
-            release_date={movie.release_date}
           />
         ))}
       </section>

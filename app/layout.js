@@ -1,9 +1,7 @@
-"use client"
-
 import './globals.css'
 import Link from 'next/link'
+import NavLink from './NavLink'
 import { IBM_Plex_Sans, Creepster } from '@next/font/google'
-import { useRouter } from 'next/router'
 
 
 const creepster = Creepster({
@@ -17,9 +15,15 @@ const ibmPlexSans = IBM_Plex_Sans({
   variable: "--font-ibmPlexSans"
 })
 
-export default function RootLayout({ children }) {
 
-  return (
+export default function RootLayout({ children }) {
+  const links = [
+    {label: 'Popular', path: '/popular', targetSegment: 'popular'}, 
+    {label: 'Top-rated', path: '/top-rated', targetSegment: 'top-rated'},
+    {label: 'Upcoming', path: '/upcoming', targetSegment: 'upcoming'}
+  ]
+  
+return (
     <html lang="en">
       {/*
         <head /> will contain the components returned by the nearest parent
@@ -27,31 +31,24 @@ export default function RootLayout({ children }) {
       */}
       <head />
       <body className={ibmPlexSans.className}>
-      <nav>
+        <Link href="/">
         <h1 className={creepster.className}>Movie Time</h1>
-        <ul>
+        </Link>
+        <ul className="first-nav">
           <li><a href="/about">About</a></li>
           <li><a href="#">Sign in</a></li>
         </ul>
-      </nav>
-      <ul>
-        <li>
-          <Link href="/popular" >
-          <h2>Popular Movies</h2>
-          </Link>
-        </li>
-        <li>
-          <Link href="/top-rated" >
-        <h2>Top Rated</h2>
-          </Link>
-        </li>
-        <li>
-          <Link href="/upcoming" >
-        <h2>Upcoming</h2>
-          </Link>
-        </li>
+        <ul>        
+          {links.map ( (l, i) => 
+          <li key={i} className="second-nav">
+            <NavLink key={i} {...l} />
+          </li>
+        )}
         </ul>
-        {children}</body>
+
+        {children}
+        
+      </body>
     </html>
   )
 }
