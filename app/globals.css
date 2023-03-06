@@ -15,6 +15,10 @@ body {
 body {
   font-family: 'IBM Plex Sans', sans-serif;
   color: white;
+  background: linear-gradient(203deg, rgba(0,0,0,1) 15%, rgba(34,64,101,1) 100%);
+}
+
+section {
   background: linear-gradient(90deg, rgba(0,0,0,1) 15%, rgba(34,64,101,1) 100%);
 }
 
@@ -33,7 +37,7 @@ h2 {
 
 }
 
-p {
+h2, h3, p {
   font-weight: 100;
 }
 
@@ -62,6 +66,8 @@ li a:hover {
 img{
   border-radius: 1%;
   transition: all 0.3s ease-in-out;
+  width: 100%;
+  height: auto;
 }
 
 article, li a, h1 {
@@ -119,6 +125,7 @@ input {
   padding: 5px 0px;
   font-size: 1rem;
   color: black;
+  border: none;
 }
 input:focus-visible {
   outline: -webkit-focus-ring-color auto 0px;
@@ -130,6 +137,8 @@ input:focus-visible {
   padding: 3rem;
   display: flex;
   justify-content: center;
+  z-index: 1;
+    position: relative;
 }
 .main {
   padding: 3rem;
@@ -139,7 +148,7 @@ input:focus-visible {
   width: 100%;
   height: auto;
   position: absolute;
-  z-index: 0;
+  z-index: -1;
 }
 
 .form-container{
@@ -151,7 +160,8 @@ input:focus-visible {
     max-width: 600px;
     height: 400px;
     border-radius: 20px;
-    background: #2bb9ad;
+    backdrop-filter: blur(8px);
+    background: #025b585c;
     }
   
   .form-container div {
@@ -159,9 +169,11 @@ input:focus-visible {
   }
   
   .form-container button {
-    background: #213d616b;
     padding: 10px 15px;
     border-radius: 15px;
+    border: none;
+    background: #a9ffd5;
+    color: #041324;
   }
   
   .form-container div a + a {

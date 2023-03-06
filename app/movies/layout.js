@@ -1,5 +1,4 @@
 import '../globals.css'
-import Link from 'next/link'
 import NavLink from './NavLink'
 import { IBM_Plex_Sans, Creepster } from '@next/font/google'
 
@@ -24,20 +23,7 @@ export default function RootLayout({ children }) {
   ]
   
 return (
-    <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
-      <head />
-      <body className={ibmPlexSans.className}>
-        <Link href="/">
-        <h1 className={creepster.className}>Movie Time</h1>
-        </Link>
-        <ul className="first-nav">
-          <li><a href="/about">About</a></li>
-          <li><a href="/login">Sign in</a></li>
-        </ul>
+    <section>
         <ul>        
           {links.map ( (l, i) => 
           <li key={i} className="second-nav">
@@ -45,10 +31,7 @@ return (
           </li>
         )}
         </ul>
-
         {children}
-        
-      </body>
-    </html>
-  )
+      </section>
+      )
 }

@@ -16,7 +16,6 @@ export default function Movie({ title, id, poster_path, release_date }) {
         <p>Release date: {release_date}</p>
       )}
       </Link>
-      {/* <p className={"font-thin"}>Released: {release_date}</p> */}
     </article>
   );
 }

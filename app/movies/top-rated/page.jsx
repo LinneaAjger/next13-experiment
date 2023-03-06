@@ -1,6 +1,5 @@
 import Movie from "../Movie";
 import styles from "app/page.module.css"
-import Link from "next/link";
 
 export default async function Home() {
 
