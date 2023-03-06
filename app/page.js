@@ -1,21 +1,20 @@
-import Movie from "./Movie";
+import Movie from "./movies/Movie";
 import styles from './page.module.css';
 import Link from "next/link";
+import Form from "./Form";
+import Image from "next/image";
+
 
 export default async function Home() {
   return (
-    <main className={styles.firstMain}>
-      <div className={styles.container}>
-        <h2>Log in</h2>
-      <div>
-        <Link href="/register">
-          <button>Register</button>
-        </Link>
-        <Link href="/login">
-          <button>Sign in</button>
-        </Link>
-      </div>
-      </div>
+    <main className={styles.startPage}>
+        <div>
+          <h2 className={styles.firstPage}>Get your popcorn ready</h2>
+          <button>
+            <a
+            href="/register">Register</a>
+          </button>
+        </div>
     </main>
   );
 }
