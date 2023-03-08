@@ -25,12 +25,12 @@ return (
       */}
       <head />
       <body className={ibmPlexSans.className}>
-      <Image 
+      {/* <Image 
         src="/background-cinema.jpg"
         width={1000}
         height={500}
         className='nextimg'
-        alt="cinema with people" />        
+        alt="cinema with people" />         */}
         <Link href="/">
         <h1 className={creepster.className}>Movie Time</h1>
         </Link>

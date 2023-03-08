@@ -15,16 +15,17 @@ body {
 body {
   font-family: 'IBM Plex Sans', sans-serif;
   color: white;
-  background: linear-gradient(203deg, rgba(0,0,0,1) 15%, rgba(34,64,101,1) 100%);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 15%, rgba(34,64,101,1) 100%);
+  margin: 1rem 1rem;
 }
 
 section {
-  background: linear-gradient(90deg, rgba(0,0,0,1) 15%, rgba(34,64,101,1) 100%);
+  /* background: linear-gradient(90deg, rgba(0,0,0,1) 15%, rgba(34,64,101,1) 100%); */
 }
 
 h1 {
   font-family: 'Creepster', cursive;
-  font-size: 4.5rem;
+  font-size: 3rem;
   text-align: center;
   position: relative;
 }
@@ -34,10 +35,10 @@ h1:hover {
 }
 
 h2 {
-
+  font-weight: 400;
 }
 
-h2, h3, p {
+h3, p {
   font-weight: 100;
 }
 
@@ -47,8 +48,8 @@ a {
 }
 
 ul {
-  margin: 0 3rem;
   font-weight: 100;
+  font-size: 0.8rem;
 }
 
 li {
@@ -57,10 +58,6 @@ li {
 
 li+li {
   margin-left: 1rem;
-}
-li a:hover {
-  text-shadow: 0px 0px 5px rgb(162, 198, 246);
-  filter: drop-shadow(0px 1px 3px  rgb(162, 198, 246));
 }
 
 img{
@@ -199,18 +196,19 @@ input:focus-visible {
   filter: none;
 }
 
-.first-nav {
-  text-align: center;
-  position: relative;
+.first-nav, .second-nav {
+  display: flex;
+  justify-content: center;
 }
 
 .second-nav {
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-transform: uppercase;
-  padding: 2rem 0;
+  padding: 1rem 0;
   font-weight: 100;
-  width: 160px;
 }
+
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -218,9 +216,25 @@ input:focus-visible {
 }
 
 /* Tablet */
-@media (min-width: 992px) {
+@media (min-width: 768px) {
+  body {
+    margin: 0 3rem;
+  }
+
+  h1 {
+    font-size: 4.5rem;
+  }
+
   .first-nav {
-    text-align: right;
+    justify-content: right;
+
+  }
+  .second-nav {
+    justify-content: left;    
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 2rem 0;
+    font-weight: 100;
   }
 
   .form-container{
@@ -229,6 +243,12 @@ input:focus-visible {
 }
 
 /* Desktop */
-
+ /* 576px, 768px, 992px, and 1200px */
 @media (min-width: 1200px) {
+  
+  li a:hover {
+    text-shadow: 0px 0px 5px rgb(162, 198, 246);
+    filter: drop-shadow(0px 1px 3px  rgb(162, 198, 246));
+  }
+  
 }

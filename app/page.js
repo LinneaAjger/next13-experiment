@@ -6,7 +6,8 @@ export default async function Home() {
     <main className={styles.startPage}>
         <div>
           <h2 className={styles.firstPage}>Get your popcorn ready</h2>
-            <a href="/register">Register</a>
+            <a className={styles.linkButton} href="/movies/popular">Browse movies</a>
+            <a  className={styles.linkButton} href="/register">Register</a>
         </div>
     </main>
   );

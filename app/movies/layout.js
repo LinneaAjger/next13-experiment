@@ -23,15 +23,15 @@ export default function RootLayout({ children }) {
   ]
   
 return (
-    <section>
-        <ul>        
+    <main>
+        <ul className="second-nav">        
           {links.map ( (l, i) => 
-          <li key={i} className="second-nav">
+          <li key={i}>
             <NavLink key={i} {...l} />
           </li>
         )}
         </ul>
         {children}
-      </section>
+      </main>
       )
 }

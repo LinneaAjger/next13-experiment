@@ -1,4 +1,5 @@
 import Image from "next/image";
+import styles from './page.module.css';
 
 // this should make the server prerender all the images? not sure..
 
@@ -19,19 +20,19 @@ export default async function MovieDetail({ params }) {
   )
   const res = await data.json()
   return(
-    <div>
-      <h2 className="text-2xl">{res.title}</h2>
-      <h3 className="text-lg">{res.release_date}</h3>
-      <p>Runtime:{res.runtime} minutes</p>
-      <p>{res.overview}</p>
-      <p className="bg-green-500 inline-block my-2 py-2 px-4 rounded-md text-white">{res.status}</p>
+    <section className={styles.movieDetails}>
+      <div className={styles.description}>
+        <h2>{res.title}</h2>
+        <h3 className={styles.releaseInfo}>Release {res.release_date} • {res.runtime} min</h3>
+        <p className={styles.descriptionText}>{res.overview}</p>
+      </div>
       <Image 
-      className="my-12 w-full h-full"
+      className={styles.movieImage}
         src={imagePath + res.backdrop_path}
         width={1000}
         height={1000} 
         alt={`poster of ${res.title}`}/>
-    </div>
+    </section>
 
   )
 }

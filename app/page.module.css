@@ -32,10 +32,13 @@ font-weight: 100;
   border: none;
 }
 
-
-#active {
-  font-weight: 700;
-}
+.linkButton {
+  background: #a9ffd5;
+  padding: 0.5rem 1rem;
+  color: black;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}    
 
 /* Enable hover only on non-touch devices */
 /* @media (hover: hover) and (pointer: fine) {
