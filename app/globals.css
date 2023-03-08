@@ -16,7 +16,7 @@ body {
   font-family: 'IBM Plex Sans', sans-serif;
   color: white;
   background: linear-gradient(90deg, rgba(0,0,0,1) 15%, rgba(34,64,101,1) 100%);
-  margin: 1rem 1rem;
+  padding: 1rem 1rem;
 }
 
 header {
@@ -76,6 +76,7 @@ img{
 
 article, li a, h1 {
   transition: all 0.3s ease-in-out;
+  position: relative;
 }
 
 
@@ -118,6 +119,17 @@ input {
 }
 input:focus-visible {
   outline: -webkit-focus-ring-color auto 0px;
+}
+
+.rating {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #000000b0;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 15px;
+  color: #fab800;
 }
 
 /* Enable hover only on non-touch devices */
@@ -213,6 +225,11 @@ input:focus-visible {
   font-weight: 100;
 }
 
+.second-nav li {
+  padding-right: 2rem;
+  width: fit-content;
+}
+
 
 @media (prefers-color-scheme: dark) {
   html {
@@ -223,15 +240,9 @@ input:focus-visible {
 /* Tablet */
 @media (min-width: 768px) {
   body {
-    margin: 0 3rem;
+    padding: 3rem;
   }
 
-
-header {
-  /* flex-direction: row;
-  justify-content: space-between;
-  align-items: baseline; */
-}
 
   h1 {
     font-size: 4.5rem;

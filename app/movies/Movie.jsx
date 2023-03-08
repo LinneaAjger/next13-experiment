@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Movie({ title, id, poster_path, release_date }) {
+export default function Movie({ title, id, poster_path, release_date, vote_average }) {
   const imagePath = 'https://image.tmdb.org/t/p/original'
   return (
     <article>
@@ -11,6 +11,9 @@ export default function Movie({ title, id, poster_path, release_date }) {
         width={500}
         height={500} 
         alt={`poster of ${title}`}/>
+      {vote_average && (
+      <p className="rating"> ★ {Math.round(vote_average * 10) / 10}</p>
+)}
       <h3>{title}</h3>
       {release_date && (
         <p>Release date: {release_date}</p>
