@@ -17,13 +17,15 @@ export default async function MovieDetail({ params }) {
   const imagePath = 'https://image.tmdb.org/t/p/original'
   const data = await fetch(
     `https://api.themoviedb.org/3/movie/${movie}?api_key=${process.env.API_KEY}`
-  )
+    )
   const res = await data.json()
   return(
     <section className={styles.movieDetails}>
       <div className={styles.description}>
+      <p className={styles.vote}>★ {Math.round(res.vote_average * 10) / 10} / 10</p>
+
         <h2>{res.title}</h2>
-        <h3 className={styles.releaseInfo}>Release {res.release_date} • {res.runtime} min</h3>
+        <h3 className={styles.releaseInfo}>Release: {res.release_date} • {res.runtime} min</h3>
         <p className={styles.descriptionText}>{res.overview}</p>
       </div>
       <Image 

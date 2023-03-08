@@ -31,13 +31,15 @@ return (
         height={500}
         className='nextimg'
         alt="cinema with people" />         */}
-        <Link href="/">
-        <h1 className={creepster.className}>Movie Time</h1>
-        </Link>
-        <ul className="first-nav">
-          <li><a href="/about">About</a></li>
-          <li><a href="/login">Sign in</a></li>
-        </ul>
+        <header>
+            <Link href="/">
+            <h1 className={creepster.className}>Movie Time</h1>
+            </Link>
+          <ul className="first-nav">
+            <li><a href="/about">About</a></li>
+            <li><a href="/login">Sign in</a></li>
+          </ul>
+        </header>
 
         {children}
         

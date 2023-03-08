@@ -7,6 +7,7 @@ export default async function Home() {
     `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.API_KEY}`
   );
   const popularRes = await popularData.json();
+  console.log(popularRes)
 
   return (
     <main className={styles.main}>

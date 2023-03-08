@@ -6,6 +6,7 @@
 }
 .startPage {
   display: flex;
+  justify-content: center;
 }
 .startPage img{
   max-width: 100%;
@@ -34,10 +35,14 @@ font-weight: 100;
 
 .linkButton {
   background: #a9ffd5;
-  padding: 0.5rem 1rem;
-  color: black;
+  padding: 1rem 5rem;
+  width: 300px;
+  text-align: center;
+  color: #041324;
   border-radius: 10px;
   margin-bottom: 1rem;
+  text-transform: uppercase;
+
 }    
 
 /* Enable hover only on non-touch devices */
